@@ -1,4 +1,4 @@
-public class Drink implements Food{
+public abstract class Drink implements Food{
     private float price;
     private int calories;
     private boolean aCan = false;
