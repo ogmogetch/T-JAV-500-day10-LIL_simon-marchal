@@ -1,5 +1,7 @@
-public class SoftBread extends Bread{
+public class SoftBread extends Bread {
+
     public SoftBread() {
-        super(500, 30, 1.20f);
+        super(1.20f, 500);
+        this.bakingTime = 30;
     }
 }

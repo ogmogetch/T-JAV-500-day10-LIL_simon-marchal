@@ -1,13 +1,13 @@
-public abstract class Bread implements Food{
-    int calories, bakingTime;
-    float price;
+public abstract class Bread implements Food {
 
-    public Bread(int calories, int bakingTime, float price) {
+    protected float price;
+    protected int calories;
+    protected int bakingTime = 0;
+
+    protected Bread(float price, int calories) {
         this.price = price;
         this.calories = calories;
-        this.bakingTime = bakingTime;
     }
-
 
     @Override
     public float getPrice() {
@@ -22,4 +22,5 @@ public abstract class Bread implements Food{
     public int getBakingTime() {
         return bakingTime;
     }
+
 }

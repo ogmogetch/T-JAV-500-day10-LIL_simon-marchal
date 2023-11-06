@@ -1,19 +1,22 @@
-public abstract class Menu<D extends Drink, M extends Food>{
-    private D drink;
-    private M meal;
-    public Menu(D drink, M meal) {
+public abstract class Menu<T extends Food, V extends Food> {
+
+    protected T drink;
+    protected V meal;
+
+    protected Menu(T drink, V meal) {
         this.drink = drink;
         this.meal = meal;
     }
-    public D getDrink() {
+
+    public T getDrink() {
         return drink;
     }
-    public M getMeal() {
+
+    public V getMeal() {
         return meal;
     }
 
     public float getPrice() {
-        float total = drink.getPrice() + meal.getPrice();
-        return total - (total * 0.1f);
+        return (drink.getPrice() + meal.getPrice()) * 0.9f;
     }
 }
